@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/ratioLabel"
+            android:layout_width="193dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="24dp"
+            android:text="Conc - Vol Calculator"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/concentration1"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Concentration (s)"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelText="Concentration (s)" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/volume1"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Volume (s)"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelText="Volume (s)" />
+
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/concentration2"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Concentration (f)"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.239"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_floatingLabel="normal"
+            app:met_helperText=""
+            app:met_helperTextAlwaysShown="true"
+            app:met_floatingLabelText="Concentration (f)" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/volume2"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Volume (f)"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.76"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_floatingLabel="normal"
+            app:met_helperText=""
+            app:met_helperTextAlwaysShown="true"
+            app:met_floatingLabelText="Volume (f)" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_spotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="84dp"
+            android:layout_marginTop="36dp"
+            android:onClick="CalculateConcVol"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/colorPink"
+            fancy:fb_focusColor="@color/colorPrimaryDark"
+            fancy:fb_iconResource="@drawable/ic_magic"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="CALCULATE"
+            fancy:fb_textColor="#FFFFFF" />
+
+        <!--<Button-->
+            <!--android:id="@+id/button"-->
+            <!--style="@style/Widget.AppCompat.Button.Colored"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="84dp"-->
+            <!--android:layout_marginTop="36dp"-->
+            <!--android:background="@drawable/button_bg"-->
+            <!--android:drawableLeft="@drawable/ic_magic"-->
+            <!--android:onClick="CalculateConcVol"-->
+            <!--android:paddingHorizontal="20dp"-->
+            <!--android:text="  Calculate"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:layout_constraintVertical_bias="0.832" />-->
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

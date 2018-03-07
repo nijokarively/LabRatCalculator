@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LabRat Calculator</string>
+    <string name="title_home">Dilution</string>
+    <string name="title_dashboard">PCR Mix</string>
+    <string name="title_notifications">Formulae</string>
+    <string name="progress_loading">Loading&#8230;</string>
+    <string name="text_from">From</string>
+    <string name="text_to">To</string>
+    <string name="default_value">1</string>
+
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/ratioLabel"
+            android:layout_width="183dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="24dp"
+            android:text="Mass Calculator"
+            android:textAlignment="center"
+            android:textAppearance="@android:style/TextAppearance.Material.Title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/concentration"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:hint="Concentration (mM)"
+            android:inputType="numberDecimal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelText="Concentration (mM)"/>
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/volume"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:hint="Volume (ml)"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelText="Volume (ml)"/>
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/molWeight"
+            android:layout_width="166dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:ems="10"
+            android:hint="Mol. Weight (g/mol)"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelText="Molecular Weight (g/mol)"/>
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/btn_spotify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="84dp"
+            android:layout_marginTop="84dp"
+            android:onClick="CalculateMolarity"
+            fancy:fb_borderColor="#FFFFFF"
+            fancy:fb_borderWidth="1dp"
+            fancy:fb_defaultColor="@color/colorPink"
+            fancy:fb_focusColor="@color/colorPrimaryDark"
+            fancy:fb_iconResource="@drawable/ic_magic"
+            fancy:fb_iconPosition="left"
+            fancy:fb_radius="30dp"
+            fancy:fb_text="CALCULATE"
+            fancy:fb_textColor="#FFFFFF" />
+
+        <!--<Button-->
+            <!--android:id="@+id/button"-->
+            <!--style="@style/Widget.AppCompat.Button.Colored"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="84dp"-->
+            <!--android:layout_marginTop="84dp"-->
+            <!--android:background="@drawable/button_bg"-->
+            <!--android:drawableLeft="@drawable/ic_balance_scale"-->
+            <!--android:onClick="CalculateMolarity"-->
+            <!--android:paddingHorizontal="20dp"-->
+            <!--android:text="  Calculate"-->
+            <!--app:layout_constraintBottom_toBottomOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:layout_constraintVertical_bias="0.832" />-->
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

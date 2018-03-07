@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#607D8B</color>
+    <color name="colorPopup">#303440</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray">#c5cae9</color>
+    <color name="colorPink">#e91e63</color>>
+    <color name="analytics">#e26a6a</color>
+
+
+
+</resources>
