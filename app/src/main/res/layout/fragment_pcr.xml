@@ -179,6 +179,40 @@
                 app:met_floatingLabel="normal"
                 app:met_floatingLabelText="Potential error (%)" />
 
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/taq"
+                android:layout_width="251dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:hint="Taq Polymerase (5U/μl)"
+                android:inputType="numberDecimal"
+                android:text="0.2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="Taq Polymerase (5U/μl)" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/bsa"
+                android:layout_width="251dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:hint="BSA (mg/ml)"
+                android:inputType="numberDecimal"
+                android:text="0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.504"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:met_floatingLabel="normal"
+                app:met_floatingLabelText="BSA (mg/ml)" />
+
             <mehdi.sakout.fancybuttons.FancyButton
                 android:id="@+id/btn_spotify"
                 android:layout_width="wrap_content"

@@ -304,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void CalculatePCR(View v){
-        TextView pcrVol,sampleVol,dntpConc,mgcl2Conc,primerConc, negSamples, samples, error;
+        TextView pcrVol,sampleVol,dntpConc,mgcl2Conc,primerConc, negSamples, samples, error, taqPoli, bsa;
 
         pcrVol = (TextView) findViewById(R.id.volPRC);
         sampleVol = (TextView) findViewById(R.id.volSampTemplate);
@@ -314,6 +314,10 @@ public class MainActivity extends AppCompatActivity {
         negSamples = (TextView) findViewById(R.id.negSamples);
         samples = (TextView) findViewById(R.id.samples);
         error = (TextView) findViewById(R.id.error);
+        taqPoli = (TextView) findViewById(R.id.taq);
+        bsa = (TextView) findViewById(R.id.bsa);
+
+
         ArrayList<Float> listValues = new ArrayList<Float>();
 
         try {
@@ -325,9 +329,11 @@ public class MainActivity extends AppCompatActivity {
             listValues.add(Float.parseFloat(negSamples.getText().toString()));
             listValues.add(Float.parseFloat(samples.getText().toString()));
             listValues.add(Float.parseFloat(error.getText().toString()));
+            listValues.add(Float.parseFloat(taqPoli.getText().toString()));
+            listValues.add(Float.parseFloat(bsa.getText().toString()));
 
-            float h2o,pcrBuffer,mgcl2,fPrimer,rPrimer,dntps,taqPoly,mixVolume;
-            float h2oMM,pcrBufferMM,mgcl2MM,fPrimerMM,rPrimerMM,dntpsMM,taqPolyMM,mixVolumeMM;
+            float h2o,pcrBuffer,mgcl2,fPrimer,rPrimer,dntps,taqPoly,bsaSR,mixVolume;
+            float h2oMM,pcrBufferMM,mgcl2MM,fPrimerMM,rPrimerMM,dntpsMM,taqPolyMM,bsaMM,mixVolumeMM;
             float template, finVolReact;
             float temp;
 
@@ -347,14 +353,18 @@ public class MainActivity extends AppCompatActivity {
             dntps = listValues.get(0) * listValues.get(2) / (2.5f);
             dntpsMM = temp * dntps;
 
-            taqPoly = (0.2f);
+            taqPoly = listValues.get(8);
             taqPolyMM = temp * taqPoly;
 
-            h2o = (listValues.get(0) - (listValues.get(1) + pcrBuffer + mgcl2 + fPrimer + rPrimer + dntps + taqPoly ));
+            bsaSR = listValues.get(9);
+            bsaMM = temp * bsaSR;
+
+
+            h2o = (listValues.get(0) - (listValues.get(1) + pcrBuffer + mgcl2 + fPrimer + rPrimer + dntps + taqPoly + bsaSR));
             h2oMM = temp * h2o;
 
-            mixVolume = h2o + pcrBuffer + mgcl2 + fPrimer + rPrimer + dntps + taqPoly ;
-            mixVolumeMM = h2oMM + pcrBufferMM + mgcl2MM + fPrimerMM + rPrimerMM + dntpsMM + taqPolyMM;
+            mixVolume = h2o + pcrBuffer + mgcl2 + fPrimer + rPrimer + dntps + taqPoly + bsaSR;
+            mixVolumeMM = h2oMM + pcrBufferMM + mgcl2MM + fPrimerMM + rPrimerMM + dntpsMM + taqPolyMM + bsaMM;
 
             template = listValues.get(1);
             finVolReact = mixVolume + template;
@@ -366,6 +376,7 @@ public class MainActivity extends AppCompatActivity {
                     { "Reverse Primer (10 pmoles/μl)", String.format("%.2f", rPrimer), String.format("%.2f", rPrimerMM)},
                     { "dNTPs (2.5 mM)", String.format("%.2f", dntps), String.format("%.2f", dntpsMM)},
                     { "Taq Polymerase (5U/μl)", String.format("%.2f", taqPoly), String.format("%.2f", taqPolyMM)},
+                    { "BSA (mg/ml)", String.format("%.2f", bsaSR), String.format("%.2f", bsaMM)},
                     { "Mix Volume", String.format("%.2f", mixVolume), String.format("%.2f", mixVolumeMM)},
                     { "Template", String.format("%.2f", template), ""},
                     { "Final Vol. of individual reaction", String.format("%.2f", finVolReact), ""}};
